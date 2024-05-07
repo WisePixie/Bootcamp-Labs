@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+    static void Main(string[] args)
+    {
+        for (int i = 1; i <= 20; i++)
+        {
+            if (i % 3 == 0)
+            {
+                Console.WriteLine($"Number {i} is divisible by 3");
+            }
+        }
+    }
+}
