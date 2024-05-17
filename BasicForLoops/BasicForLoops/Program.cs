@@ -17,7 +17,7 @@
             choice = Console.ReadLine();
             Console.WriteLine();
         }
-        while (choice.ToLower() == "y");
-
-        Console.WriteLine("Goodbye!");
+        //while (choice.ToLower() == "y");
+while (choice.ToLower().Trim() == "y") ;
+Console.WriteLine("Goodbye!");
 
