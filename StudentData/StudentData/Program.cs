@@ -32,6 +32,8 @@ string[] favoriteFoods = { "Burger", "Steak", "Sushi", "Waffle's", "Meatloaf", "
 
 int arrayLength = names.Length;
 
+
+
 while (true)
 {
     try
@@ -40,7 +42,7 @@ while (true)
         //Use the integer as the index for the arrays.
         //Print the student’s name.
         Console.WriteLine("Welcome! Which student would you like to learn more about? Enter a number (1-{0}): ", arrayLength);
-        Console.WriteLine("To Exit enter: 0"); 
+        Console.WriteLine("To Exit enter: 0 Enter -1 for list"); 
 
 
 
@@ -50,6 +52,14 @@ while (true)
         {
             Console.WriteLine("Exiting the program. Goodbye");
             break;
+        }
+
+        if (studentNumber == -1) 
+        {
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
         }
 
         if (studentNumber < 1 || studentNumber > arrayLength)//invalid user input if int less than 1 or # of students or # in array are not valid
