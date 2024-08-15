@@ -1,0 +1,6 @@
+@PracticeAssesment6_HostAddress = http://localhost:5119
+
+GET {{PracticeAssesment6_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
