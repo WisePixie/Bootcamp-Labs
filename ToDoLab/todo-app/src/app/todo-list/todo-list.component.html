@@ -1,0 +1,43 @@
+<div class="background">
+<div>
+
+<h1>To-Do List</h1>
+
+<ul>
+  <li *ngFor="let todo of todo; let i = index" [class.completed]="todo.completed">
+    <span>{{ todo.task }} ({{ todo.duration | number }} mins)</span>
+    <span *ngIf="todo.priority && todo.priority !== 'NORMAL'">[{{ todo.priority }} Priority]</span>
+    <button *ngIf="!todo.completed" (click)="completeTask(i)">Complete</button>
+    <button (click)="removeTask(i)">X</button>
+  </li>
+</ul>
+
+
+
+
+<form (submit)="addTodo()">
+<p class="row1">
+  <input type="text" class="inputbox" [(ngModel)]="task" placeholder="Task" name="task" required >
+  <input type="number" class="inputbox" [(ngModel)]="duration" placeholder="Duration (mins)" name="duration" required>
+</p>
+  <p class="row1">
+    <label>
+      <input type="radio" [(ngModel)]="priority" name="priority" value="LOW"> Low
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="priority" name="priority" value="NORMAL" checked> Normal
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="priority" name="priority" value="HIGH"> High
+    </label>
+  </p>
+  <p class="row1">
+  <button type="submit" id="submitbutton">Add Todo</button>
+  </p>
+</form>
+</div>
+
+
+
+
+
